@@ -7,11 +7,16 @@ describe 'when user goes to comedian page' do
 
         visit comedians_path
 
-        expect(page).to have_content('Ray')
-        expect(page).to have_content('22')
-        expect(page).to have_content('New York')
-        expect(page).to have_content('Jon')
-        expect(page).to have_content('32')
-        expect(page).to have_content('Boston')
+        within "#comedian-#{ray.id}" do 
+            expect(page).to have_content('Ray')
+            expect(page).to have_content('22')
+            expect(page).to have_content('New York')
+        end
+
+        within "#comedian-#{jon.id}" do 
+            expect(page).to have_content('Jon')
+            expect(page).to have_content('32')
+            expect(page).to have_content('Boston')
+        end
     end
 end
