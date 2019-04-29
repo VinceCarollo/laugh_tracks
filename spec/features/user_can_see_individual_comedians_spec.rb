@@ -9,9 +9,9 @@ describe 'when user clicks on comedian' do
 
             click_link ray.name
 
-            expect(page).to have_content(comedian.name)
-            expect(page).to have_content(comedian.age)
-            expect(page).to have_content(comedian.city)
+            expect(page).to have_content('Ray')
+            expect(page).to have_content('22')
+            expect(page).to have_content('New York')
         end 
     end
 end
