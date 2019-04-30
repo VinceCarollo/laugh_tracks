@@ -1,3 +1,3 @@
 class Special < ApplicationRecord
-    validates_presence_of :name, :runtime_mins, :comedian_id, :image_url
+    validates_presence_of :name, :runtime_mins, :comedian_id
 end
