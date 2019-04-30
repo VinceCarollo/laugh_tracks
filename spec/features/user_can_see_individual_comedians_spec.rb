@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe 'when user clicks on comedian' do 
-    describe 'it takes you to individual comedian page' do 
-        it 'displays comdian info' do 
-            ray = Comedian.create!(name: 'Ray', age: 22, city: 'New York')
+describe 'when user clicks on comedian' do
+    describe 'it takes you to individual comedian page' do
+        it 'displays comdian info' do
+            ray = Comedian.create!(name: 'Ray', age: 22, birthplace: 'New York')
 
             visit comedians_path
 
@@ -12,6 +12,6 @@ describe 'when user clicks on comedian' do
             expect(page).to have_content('Ray')
             expect(page).to have_content('22')
             expect(page).to have_content('New York')
-        end 
+        end
     end
 end
