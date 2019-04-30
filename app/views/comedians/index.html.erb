@@ -1,8 +1,8 @@
 <h1>Comedians</h1>
 <% @comedians.each do |comedian| %>
-    <div class="comedian_info">
-    <%= link_to comedian.name, comedian_path(comedian) %>
-    <%= comedian.age %>
-    <%= comedian.city %>
+    <div id="comedian-<%= comedian.id %>" class='comedian_card'>
+        <p>Name: <%= link_to comedian.name, comedian_path(comedian) %></p>
+        <p>Age: <%= comedian.age %></p>
+        <p>Birthplace: <%= comedian.birthplace %></p>
     </div>
 <% end %>
