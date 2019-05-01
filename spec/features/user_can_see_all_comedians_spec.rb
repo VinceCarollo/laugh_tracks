@@ -33,4 +33,16 @@ describe 'when user goes to comedian page' do
             find "img[src='https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,q_auto:eco,w_1200/https://inews.co.uk/wp-content/uploads/2019/04/got-cast26.jpg']"
         end
     end
+
+    it 'can filter by comedian age' do
+      ray = Comedian.create!(name: 'Ray', age: 22, birthplace: 'New York')
+      jon = Comedian.create!(name: 'Jon', age: 32, birthplace: 'Boston')
+      jason = Comedian.create!(name: 'Jason', age: 22, birthplace: 'KCMO')
+
+      visit '/comedians?age=22'
+
+      expect(page).to have_content(ray.name)
+      expect(page).to have_content(jason.name)
+      expect(page).to_not have_content(jon.name)
+    end
 end

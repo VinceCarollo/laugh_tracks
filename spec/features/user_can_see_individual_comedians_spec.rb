@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'when user clicks on comedian' do
     describe 'it takes you to individual comedian page' do
-        it 'displays comdian info' do
+        it 'displays comedian info' do
             ray = Comedian.create!(name: 'Ray', age: 22, birthplace: 'New York')
 
             visit comedians_path
