@@ -30,7 +30,7 @@ describe 'when user goes to comedian page' do
             expect(page).to have_content('Live and Livin')
             expect(page).to have_content(42)
             expect(page).to have_content(64)
-            find "img[src='https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,q_auto:eco,w_1200/https://inews.co.uk/wp-content/uploads/2019/04/got-cast26.jpg']"            
+            find "img[src='https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,q_auto:eco,w_1200/https://inews.co.uk/wp-content/uploads/2019/04/got-cast26.jpg']"
         end
     end
 end
