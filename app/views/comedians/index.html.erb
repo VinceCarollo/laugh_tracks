@@ -4,9 +4,14 @@
         <h5><%= link_to comedian.name, comedian_path(comedian), :style=>"text-decoration: none; color: black;" %></h5>
         <p>Age: <%= comedian.age %></p>
         <p>Birthplace: <%= comedian.birthplace %></p>
-        <h4>Specials:</h4>
-        <% comedian.specials.each do |special| %>
-          <p><%= special.name%>   <%=  special.runtime_mins %></p>
-        <% end %>
+        <div class="specials">
+          <h4>Specials:</h4><br>
+          <% comedian.specials.each do |special| %>
+            <p class = 'special_name'><%= special.name%></p><br>
+            <p class="mins">length: <%=  special.runtime_mins %> minutes</p><br>
+          <% end %>
+        </div>
+        <br>
+        <img class='comedian_img' id="comedian-<%= comedian.id %>-img" src =<%= comedian.image_url %>>
     </div>
 <% end %>
