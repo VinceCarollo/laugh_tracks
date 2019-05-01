@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Comedian.destroy_all
 
 bill = Comedian.create(name: "Bill Burr", age: 50, birthplace: "Canton, MA", image_url: "https://image.masslive.com/home/mass-media/width960/img/entertainment/photo/nashville-comedy-festival-21d347107e975672.jpg")
@@ -20,6 +19,7 @@ tom = Comedian.create(name: "Tom Segura", age: 39, birthplace: "Cincinnati, OH",
 ari = Comedian.create(name: "Ari Shaffir", age: 44, birthplace: "New York City, NY", image_url: "https://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2016/02/Ari-Shaffir-TINH-1.jpg?resize=1400%2C2100")
 theo = Comedian.create(name: "Theo Von", age: 38, birthplace: "Mandeville, LA", image_url: "https://uproxx.files.wordpress.com/2016/02/theo-von-no-offense-feature.jpg?quality=95")
 jerry = Comedian.create(name: "Jerry Seinfeld", age: 64, birthplace: "Brooklyn, NY", image_url: "https://www.gannett-cdn.com/-mm-/aec403ad632f33650ec1aa7926a673a5a6b987b8/c=420-0-2149-1300/local/-/media/2015/09/17/Westchester/Westchester/635780965457520146--ASBBrd-07-27-2012-PressMon-1-A002-2012-07-26-IMG-People-Seinfeld-7-1-4U1UD.jpg?width=534&height=401&fit=crop")
+mitch = Comedian.create(name: "Mitch Hedberg", age: 51 , birthplace: "Saint Paul, MN", image_url: "https://m.media-amazon.com/images/M/MV5BMTQ0NDAyNDg5OV5BMl5BanBnXkFtZTgwMDUxNjEyMjE@._V1_.jpg")
 
 Special.create(name: "Walk Your Way Out", runtime_mins: 77, comedian: bill, image_url: "https://m.media-amazon.com/images/M/MV5BMGYwNDE4MDItNjQwYi00NWIwLWJmYTYtY2I5NDEyMGUxNWMwL2ltYWdlXkEyXkFqcGdeQXVyMjUwMTM3MTU@._V1_.jpg")
 Special.create(name: "I'm Sorry You Feel That Way", runtime_mins: 80, comedian: bill, image_url: "https://m.media-amazon.com/images/M/MV5BMTk0MzI5MjAxNV5BMl5BanBnXkFtZTgwNDY1NzA0NDE@._V1_SY1000_SX675_AL_.jpg")
@@ -43,3 +43,4 @@ Special.create(name: "Paid Regular", runtime_mins: 73, comedian: ari, image_url:
 Special.create(name: "Passive Aggressive", runtime_mins: 60, comedian: ari, image_url: "https://m.media-amazon.com/images/M/MV5BMTYzNDUyMjE4M15BMl5BanBnXkFtZTcwMTQ3NzQxOQ@@._V1_SY1000_CR0,0,647,1000_AL_.jpg")
 Special.create(name: "No Offense", runtime_mins: 66, comedian: theo, image_url: "https://m.media-amazon.com/images/M/MV5BODMyZjU2NWQtMTI2ZC00Y2ZkLTllYjItNjNiM2Y1NTIyMmIyXkEyXkFqcGdeQXVyNjYzMDA4MTI@._V1_.jpg")
 Special.create(name: "Jerry Before Seinfeld", runtime_mins: 62, comedian: jerry, image_url: "https://m.media-amazon.com/images/M/MV5BOTc2N2I0Y2UtOTgyYy00MTU3LTk1YzItZGIwMDcxY2JkMGQzXkEyXkFqcGdeQXVyMjQzNzk2ODk@._V1_.jpg")
+Special.create(name: "Comedy Central Presents: Mitch Hedberg", runtime_mins: 43, comedian: mitch)
