@@ -16,3 +16,20 @@
 h3 {
   display: inline;
 }
+
+h5 {
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+}
+
+h4 {
+  padding: 10px 10px 10px 10px;
+}
+
+p {
+  padding: 10px 10px 10px 10px;
+}
+
+.comedian_card {
+  border: 2px solid black;
+}
