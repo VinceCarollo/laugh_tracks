@@ -2,8 +2,9 @@
 <% @comedians.each do |comedian| %>
     <div id="comedian-<%= comedian.id %>" class='comedian_card'>
         <h5><%= link_to comedian.name, comedian_path(comedian), :style=>"text-decoration: none; color: black;" %></h5>
-        <p>Age: <%= comedian.age %></p>
-        <p>Birthplace: <%= comedian.birthplace %></p>
+        <p><b>Age:</b> <%= comedian.age %></p>
+        <p><b>Birthplace:</b> <%= comedian.birthplace %></p>
+        <p><b>Special Count:</b> <%= comedian.specials.count%></p>
         <div class="specials">
           <h4>Specials:</h4><br>
           <% comedian.specials.each do |special| %>
