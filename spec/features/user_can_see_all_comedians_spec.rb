@@ -47,13 +47,13 @@ describe 'when user goes to comedian page' do
     end
 
     it 'can show count of each comedians special' do
-      ray = Comedian.create!(name: 'Ray', age: 22, birthplace: 'New York', image_url: 'https://www.santacruzgalapagoscruise.com/wp-content/uploads/2017/06/marbleray2-whatsthatfish.com_.jpg')
-      jon = Comedian.create!(name: 'Jon', age: 32, birthplace: 'Boston', image_url: 'https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,q_auto:eco,w_1200/https://inews.co.uk/wp-content/uploads/2019/04/got-cast26.jpg')
-      special_1 = Special.create!(name: 'Chew on This', runtime_mins: 22, comedian_id: ray.id)
-      special_2 = Special.create!(name: 'Forever Not Funny', runtime_mins: 41, comedian_id: ray.id)
-      special_3 = Special.create!(name: 'All for the Money', runtime_mins: 42, comedian_id: jon.id)
-      special_4 = Special.create!(name: 'Live and Livin', runtime_mins: 64, comedian_id: jon.id)
-      special_5 = Special.create!(name: 'So Funny', runtime_mins: 31, comedian_id: jon.id)
+      ray = Comedian.create!(name: 'Ray', age: 45, birthplace: 'New York', image_url: 'https://www.santacruzgalapagoscruise.com/wp-content/uploads/2017/06/marbleray2-whatsthatfish.com_.jpg')
+      jon = Comedian.create!(name: 'Jon', age: 65, birthplace: 'Boston', image_url: 'https://images-i.jpimedia.uk/imagefetch/c_fill,f_auto,q_auto:eco,w_1200/https://inews.co.uk/wp-content/uploads/2019/04/got-cast26.jpg')
+      special_1 = Special.create!(name: 'Chew on This', runtime_mins: 0, comedian_id: ray.id)
+      special_2 = Special.create!(name: 'Forever Not Funny', runtime_mins: 0, comedian_id: ray.id)
+      special_3 = Special.create!(name: 'All for the Money', runtime_mins: 0, comedian_id: jon.id)
+      special_4 = Special.create!(name: 'Live and Livin', runtime_mins: 0, comedian_id: jon.id)
+      special_5 = Special.create!(name: 'So Funny', runtime_mins: 0, comedian_id: jon.id)
 
       visit comedians_path
 
