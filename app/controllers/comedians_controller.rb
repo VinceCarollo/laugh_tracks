@@ -1,9 +1,9 @@
 class ComediansController < ApplicationController
-    def index 
+    def index
         @comedians = Comedian.all
     end
 
-    def show 
+    def show
         @comedian = Comedian.find(params[:id])
     end
 end
