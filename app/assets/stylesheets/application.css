@@ -10,9 +10,25 @@ h4, h5 {
   font-size: 20px;
 }
 
+h6 {
+  font-size: 18px;
+  margin: 0px;
+  padding: 10px 10px 0px 10px;
+  text-decoration: underline;
+}
+
 img {
   align-self: center;
   width: 287px; height: 288px;
+}
+
+header {
+  text-align: center;
+}
+
+.statistics p {
+  padding: 0px 10px 0px 10px;
+  margin: 0px;
 }
 
 .specials p,h4{
@@ -22,14 +38,15 @@ img {
 
 .specials {
   float: right;
-  padding: 0px 400px 0px 0px;
+  padding: 0px 250px 0px 0px;
 }
 
 .special_name {
   font-size: 20px;
 }
 
-.comedian_card {
+.comedian_card, .statistics {
+  margin: 7px 0px 7px 0px;
   border: 2px solid black;
   width: 100%;
 }
