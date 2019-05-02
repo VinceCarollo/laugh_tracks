@@ -10,4 +10,20 @@ class ComediansController < ApplicationController
     def show
         @comedian = Comedian.find(params[:id])
     end
+
+    def new
+    end
+
+    def create
+      comedian = Comedian.new(comedian_params)
+      comedian.save
+
+      redirect_to "/comedians/#{comedian.id}"
+    end
+
+    private
+
+    def comedian_params
+      params.require(:comedian).permit(:name, :age, :birthplace)
+    end
 end
