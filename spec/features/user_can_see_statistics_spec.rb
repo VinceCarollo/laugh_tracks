@@ -25,6 +25,22 @@ RSpec.describe 'As a visitor' do
         end
 
       end
+
+      it 'contains statistics of filtered comedians' do
+        ray = Comedian.create!(name: 'Ray', age: 22, birthplace: 'New York')
+        jon = Comedian.create!(name: 'Jon', age: 32, birthplace: 'Boston')
+        jason = Comedian.create!(name: 'Jason', age: 22, birthplace: 'Kansas City')
+
+        visit '/comedians?age=22'
+
+        within '.statistics' do
+          expect(page).to have_content(22)
+          expect(page).to have_content("New York")
+          expect(page).to_not have_content("Boston")
+          expect(page).to have_content("Kansas City")
+        end
+
+      end
     end
   end
 end
