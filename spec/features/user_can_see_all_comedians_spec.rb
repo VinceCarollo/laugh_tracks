@@ -58,12 +58,12 @@ describe 'when user goes to comedian page' do
       visit comedians_path
 
       within "#comedian-#{ray.id}" do
-        expect(page).to have_content('Special Count:')
+        expect(page).to have_content('Special Amount:')
         expect(page).to have_content(2)
       end
 
       within "#comedian-#{jon.id}" do
-        expect(page).to have_content('Special Count:')
+        expect(page).to have_content('Special Amount:')
         expect(page).to have_content(3)
       end
 
