@@ -1,14 +1,15 @@
 class ComediansController < ApplicationController
     def index
         if !params[:age].nil?
-          @comedians = Comedian.where("age = #{params[:age]}").all
+          @comedians = Comedian.get_comedians_by_age(params[:age])
         else
-          @comedians = Comedian.all
+          @comedians = Comedian.get_all_comedians
         end
+        @comedian_count = @comedians.count
     end
 
     def show
-        @comedian = Comedian.find(params[:id])
+        @comedian = Comedian.get_comedian_by_id(params[:id])
     end
 
     def new
