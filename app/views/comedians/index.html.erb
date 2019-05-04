@@ -7,7 +7,7 @@
     <% ages += comedian.age %>
     <% cities << comedian.birthplace %>
   <% end %>
-  <p><b>Average Age:</b> &nbsp; <%= ages / @comedians.count %></p><br>
+  <p><b>Average Age:</b> &nbsp; <%= ages / @comedian_count %></p><br>
   <p><b>Cities:</b> &nbsp;
     <% cities.each do |city| %>
       <%= city %> &nbsp;
@@ -20,7 +20,7 @@
         <h5><%= link_to comedian.name, comedian_path(comedian), :style=>"text-decoration: none; color:#2EC4B6; font-size: 45px;" %></h5><br>
         <p><b>Age:</b> <%= comedian.age %></p>
         <p><b>Birthplace:</b> <%= comedian.birthplace %></p>
-        <p><b>Special Amount:</b> &nbsp; <%= comedian.specials.count%></p>
+        <p><b>Special Amount:</b> &nbsp; <%= comedian.special_count%></p>
         <div class="specials">
           <h4>Specials</h4><br>
           <% comedian.specials.each do |special| %>
