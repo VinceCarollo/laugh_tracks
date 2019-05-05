@@ -39,6 +39,10 @@ describe 'when user goes to comedian page' do
       jon = Comedian.create!(name: 'Jon', age: 32, birthplace: 'Boston')
       jason = Comedian.create!(name: 'Jason', age: 22, birthplace: 'KCMO')
 
+      special_1 = Special.create!(name: 'Chew on This', runtime_mins: 22, comedian: ray)
+      special_3 = Special.create!(name: 'All for the Money', runtime_mins: 42, comedian: jon)
+      special_3 = Special.create!(name: 'None for the Money', runtime_mins: 42, comedian: jason)
+
       visit '/comedians?age=22'
 
       expect(page).to have_content(ray.name)
