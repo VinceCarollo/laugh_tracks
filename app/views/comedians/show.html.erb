@@ -1,5 +1,11 @@
-<div class="comedian_card">
-  <h2><%= @comedian.name %></h2>
-  <h3>Age:</h3> <p><%= @comedian.age %></p>
-  <h3>Birthplace:</h3> <p><%= @comedian.birthplace %></p>
+<img class='comedian_img' id="comedian-<%= @comedian.id %>-img" src =<%= @comedian.image_url %>><br>
+<h5><%= @comedian.name %></h5>
+<p>Age: &nbsp; <%= @comedian.age %></p>
+<p>Birthplace: &nbsp; <%= @comedian.birthplace %></p>
+<div class="specials">
+  <h4>Specials</h4><br>
+  <% @comedian.specials.each do |special| %>
+    <p class='special_name'><%= special.name%></p>
+    <p class="mins">length: <%=  special.runtime_mins %> minutes</p><br>
+  <% end %>
 </div>
