@@ -18,9 +18,9 @@
     <div id="comedian-<%= comedian.id %>" class='comedian_card'>
       <img class='comedian_img' id="comedian-<%= comedian.id %>-img" src =<%= comedian.image_url %>><br>
         <h5><%= link_to comedian.name, comedian_path(comedian), :style=>"text-decoration: none; color:#2EC4B6; font-size: 45px;" %></h5><br>
-        <p><b>Age:</b> <%= comedian.age %></p>
-        <p><b>Birthplace:</b> <%= comedian.birthplace %></p>
-        <p><b>Special Amount:</b> &nbsp; <%= comedian.special_count%></p>
+        <p>Age: &nbsp; <%= comedian.age %></p>
+        <p>Birthplace: &nbsp; <%= comedian.birthplace %></p>
+        <p>Special Amount: &nbsp; <%= comedian.special_count%></p>
         <div class="specials">
           <h4>Specials</h4><br>
           <% comedian.specials.each do |special| %>
