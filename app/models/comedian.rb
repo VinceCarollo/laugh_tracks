@@ -6,6 +6,10 @@ class Comedian < ApplicationRecord
     self.specials.count
   end
 
+  def runtimes
+    self.specials.sum{|special| special.runtime_mins}
+  end
+
   def self.get_comedians_by_age(age)
     self.where("age = #{age}")
   end
