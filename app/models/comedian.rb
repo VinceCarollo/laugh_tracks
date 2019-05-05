@@ -6,8 +6,24 @@ class Comedian < ApplicationRecord
     self.specials.count
   end
 
-  def runtimes
-    self.specials.sum{|special| special.runtime_mins}
+  def self.get_total_runtimes
+    self.sum{|comedian| comedian.specials.sum(:runtime_mins)}
+  end
+
+  def self.get_total_special_count
+    self.sum{|comedian| comedian.special_count}
+  end
+
+  def self.get_count
+    self.count
+  end
+
+  def self.get_all_cities
+    self.pluck(:birthplace)
+  end
+
+  def self.get_age_total
+    self.sum(:age)
   end
 
   def self.get_comedians_by_age(age)
