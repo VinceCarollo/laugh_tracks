@@ -2,13 +2,19 @@
 <div class="statistics">
   <h6>Statistics</h6>
   <% ages = 0 %>
+  <% all_special_count = 0 %>
+  <% total_runtime = 0 %>
   <% cities = [] %>
   <% @comedians.each do |comedian| %>
     <% ages += comedian.age %>
     <% cities << comedian.birthplace %>
+    <% all_special_count += comedian.special_count %>
+    <% total_runtime +=  comedian.runtimes%>
   <% end %>
-  <p><b>Average Age:</b> &nbsp; <%= ages / @comedian_count %></p><br>
-  <p><b>Cities:</b> &nbsp;
+  <p>Average Age: &nbsp; <%= ages / @comedian_count %></p><br>
+  <p>All Specials Count: &nbsp; <%= all_special_count %> </p><br>
+  <p>Average Special Run Length: &nbsp; <%= (total_runtime / all_special_count.to_f).round(1) %> &nbsp; minutes</p>
+  <p>Cities: &nbsp;
     <% cities.each do |city| %>
       <%= city %> &nbsp;
     <% end %>
