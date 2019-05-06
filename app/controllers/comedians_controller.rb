@@ -5,7 +5,11 @@ class ComediansController < ApplicationController
         else
           @comedians = Comedian.get_all_comedians
         end
-        @comedian_count = @comedians.count
+        @comedian_count = @comedians.get_count
+        @comedian_age_total = @comedians.get_age_total
+        @all_comedian_cities = @comedians.get_all_cities
+        @all_specials_count = @comedians.get_total_special_count
+        @total_runtimes = @comedians.get_total_runtimes
     end
 
     def show
