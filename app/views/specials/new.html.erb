@@ -1,0 +1,8 @@
+<h1>Add to <%= @comedian.name %>'s specials</h1>
+<%= form_for [@comedian, @special] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :runtime %>
+  <%= f.text_field :runtime_mins %>
+  <%= f.submit %>
+<% end %>
