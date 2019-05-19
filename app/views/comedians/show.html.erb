@@ -1,7 +1,8 @@
 <img class='comedian_img' id="comedian-<%= @comedian.id %>-img" src =<%= @comedian.image_url %>><br>
 <h5><%= @comedian.name %></h5>
 <p>Age: &nbsp; <%= @comedian.age %></p>
-<p>Birthplace: &nbsp; <%= @comedian.birthplace %></p>
+<p>Birthplace: &nbsp; <%= @comedian.birthplace %></p><br>
+<%= link_to "Add Special", new_comedian_special_path(@comedian) %>
 <div class="specials">
   <h4>Specials</h4><br>
   <% @comedian.specials.each do |special| %>

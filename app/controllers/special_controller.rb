@@ -1,2 +1,0 @@
-class SpecialsController < ApplicationController
-end
