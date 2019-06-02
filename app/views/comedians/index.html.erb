@@ -1,15 +1,17 @@
 <header><h1>Comedians</h1></header>
-<div class="statistics">
-  <h6>Statistics</h6>
-  <p>Average Age: &nbsp; <%= @comedian_age_total / @comedian_count %></p><br>
-  <p>All Specials Count: &nbsp; <%= @all_specials_count %> </p><br>
-  <p>Average Special Run Length: &nbsp; <%= (@total_runtimes / @all_specials_count.to_f).round(1) %> &nbsp; minutes</p>
-  <p>Cities: &nbsp;
-    <% @all_comedian_cities.each do |city| %>
-      <%= city %> &nbsp;
-    <% end %>
-  </p>
-</div>
+<% if !@comedians.empty? %>
+  <div class="statistics">
+    <h6>Statistics</h6>
+    <p>Average Age: &nbsp; <%= @comedian_age_total / @comedian_count %></p><br>
+    <p>All Specials Count: &nbsp; <%= @all_specials_count %> </p><br>
+    <p>Average Special Run Length: &nbsp; <%= (@total_runtimes / @all_specials_count.to_f).round(1) %> &nbsp; minutes</p>
+    <p>Cities: &nbsp;
+      <% @all_comedian_cities.each do |city| %>
+        <%= city %> &nbsp;
+      <% end %>
+    </p>
+  </div>
+<% end %>
 <% @comedians.each do |comedian| %>
     <div id="comedian-<%= comedian.id %>" class='comedian_card'>
       <img class='comedian_img' id="comedian-<%= comedian.id %>-img" src =<%= comedian.image_url %>><br>
