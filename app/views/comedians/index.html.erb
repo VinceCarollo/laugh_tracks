@@ -25,7 +25,9 @@
             <p class='special_name'><%= special.name%></p>
             <p class="mins">length: <%=  special.runtime_mins %> minutes</p><br>
           <% end %>
-        </div>
-        <br>
+        </div><br>
+        <% if current_admin? %>
+          <%= link_to "Edit #{comedian.name}", edit_admin_comedian_path(comedian) %>
+        <% end %>
     </div>
 <% end %>

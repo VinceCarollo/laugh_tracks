@@ -1,0 +1,16 @@
+<h1>Register</h1>
+<% @user.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+<%= form_for @user do |f| %>
+  <%= f.label :user_name, "Username" %>
+  <%= f.text_field :user_name %><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_comfirmation %>
+  <%= f.password_field :password_comfirmation %><br>
+
+  <%= f.submit "Register me" %>
+<% end %>
