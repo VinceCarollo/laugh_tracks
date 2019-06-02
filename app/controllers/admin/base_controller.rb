@@ -4,6 +4,6 @@ class Admin::BaseController < ApplicationController
   private
 
   def require_admin
-    render status: 404 if !current_admin?
+    render file: '/public/404' if !current_admin?
   end
 end
